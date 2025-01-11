@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 250px;
+}
+
+.navbar span {
+    font-weight: bold;
+}
+
+.navbar li {
+    font-size: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 27px; 
+    font-weight: 300;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(267deg, #00f261c9, #0575e6, #ea00ffa9);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative; 
+    display: inline-block; 
+  }
+
+  .logo::before {
+    content: 'Kiel'; 
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.2); 
+    filter: blur(4px); 
+  }
