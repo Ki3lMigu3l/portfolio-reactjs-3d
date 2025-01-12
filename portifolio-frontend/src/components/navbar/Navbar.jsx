@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-function Navbar() {
+
+
+const Navbar = () =>  {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className='navbar'>
         <h1 className='logo'><span>Ez</span>Coder</h1>
-        <ul className="nav-menu">
+        <div className="hamburguer" onClick={toggleMenu}>
+          <i className='fas fa-bars'></i>
+        </div>
+        <ul  className={`nav-menu ${menuOpen ? "open" : ""}`}>
             <li>Home</li>
             <li>Projects</li>
             <li>Contacts</li>
