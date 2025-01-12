@@ -30,7 +30,6 @@
 }
 
 .hero p {
-    margin-bottom: 25px;
     width: 50%;
     text-align: center;
     font-size: 15px;
@@ -63,6 +62,7 @@
     .hero img {
         width: 100%;
         position: static;
+        margin: 20px;
     }
 
     .hero p {
@@ -85,10 +85,10 @@
     .hero img {
         width: 100%;
         position: static;
+        margin: 20px;
     }
 
     .hero p {
-        margin-top: 30px;
         width: 80%;
         font-size: 12px;
         line-height: 18px;

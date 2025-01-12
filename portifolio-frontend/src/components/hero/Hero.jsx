@@ -50,7 +50,10 @@ const Hero = () => {
         </h1>
         <img src={banner} alt="Ezequiel Miguel" />
         <p>
-        Sou estudante de Análise e Desenvolvimento de Sistemas na Uniasselvi, com 21 anos e mais de 2 anos de experiência em TI. Atualmente, atuo como Analista de Redes Nível 1 e membro do NOC na InforNetwork, onde continuo expandindo minhas habilidades. Tenho experiência prática em redes, monitoramento de infraestrutura e no desenvolvimento de soluções FullStack, liderando projetos do início ao fim.
+         Graduado em Analise e Desenvolvimento de Sistemas pela Uniasselvi, com 21 anos e mais de 2 anos de experiência em TI. Atualmente, atuo como Analista de Redes Nível 1 e membro do NOC na InforNetwork, onde continuo expandindo minhas habilidades. 
+        </p>
+        <p>
+        Tenho experiência prática em redes, monitoramento de infraestrutura e no desenvolvimento de soluções FullStack, liderando projetos do início ao fim.
         </p>
       </div>
     );
