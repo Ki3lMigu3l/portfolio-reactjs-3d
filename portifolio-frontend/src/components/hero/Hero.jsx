@@ -44,18 +44,21 @@ const Hero = () => {
   
     return (
       <div className='hero'>
-         <h1>
+         <h1 className='hero-principal-title'>
           I'm Ezequiel Miguel,{' '}
           <span className="dynamic-text">{text}</span>
         </h1>
         <img src={banner} alt="Ezequiel Miguel" />
         <p>
-         Graduado em Analise e Desenvolvimento de Sistemas pela Uniasselvi, com 21 anos e mais de 2 anos de experiência em TI. Atualmente, atuo como Analista de Redes Nível 1 e membro do NOC na InforNetwork, onde continuo expandindo minhas habilidades. 
+        Graduado em Análise e Desenvolvimento de Sistemas pela Uniasselvi, com 21 anos, possuo mais de 2 anos de experiência na área de TI. Atualmente, atuo como <span>Analista de Redes Nível 1 e membro do NOC na InforNetwork</span>, onde continuo aprimorando minhas habilidades e ampliando meu conhecimento.
+        Minha trajetória inclui expertise em soluções avançadas de redes, como tecnologias Mikrotik, além de liderar projetos Full Stack. Nessas iniciativas, participei ativamente de todas as etapas do ciclo de vida do projeto, desde a concepção até a implementação, incluindo integração de backend, frontend e pipelines de CI/CD.
         </p>
-        <p>
-        Tenho experiência prática em redes, monitoramento de infraestrutura e no desenvolvimento de soluções FullStack, liderando projetos do início ao fim.
-        </p>
+
+        <h1 className='hero-projects-title'>
+          Projetos
+        </h1>
       </div>
+      
     );
   };
   

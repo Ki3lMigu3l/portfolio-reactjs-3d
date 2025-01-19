@@ -11,6 +11,13 @@
 
 .navbar li {
     font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar li:hover {
+    color: cornsilk;
+    transform: scale(1.1);
 }
 
 .nav-menu {

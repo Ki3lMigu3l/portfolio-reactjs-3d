@@ -4,9 +4,10 @@
     align-items: center;
     gap: 35px;
     margin-top: 115px;
+    overflow: hidden;
 }
 
-.hero h1 {
+.hero-principal-title {
     background: linear-gradient(267deg, #f2ce00c9, #e66a05cc, #ea00ffc5);
     background-clip: text;
     -webkit-background-clip: text;
@@ -15,11 +16,15 @@
     font-weight: 600;
 }
 
-.hero h1 span {
+.hero-principal-title span {
     background: linear-gradient(267deg, #f2ce00c9, #e66a05cc);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+span {
+    font-weight: 600;
 }
 
 .hero img {
@@ -33,23 +38,30 @@
     width: 50%;
     text-align: center;
     font-size: 15px;
-    line-height: 21px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.hero-projects-title {
+    margin-top: 3em;
 }
 
 @media (max-width: 1024px) {
     .hero img {
-        width: 100%;
+        width: 120%;
         border-radius: 0;
+        margin-top: 2em;
         margin-bottom: 0;
     }
 
     .hero p {
-        width: 70%;
-        font-size: 14px;
+        margin-top: 3em;
+        width: 88%;
+        font-size: 16px;
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
+    .hero-principal-title {
+        font-size: 2rem;
     }
 
     .hero {
@@ -60,18 +72,19 @@
 
 @media (max-width: 768px) {
     .hero img {
-        width: 100%;
-        position: static;
-        margin: 20px;
+        width: 140%;
+        margin-top: 110px;
     }
 
     .hero p {
-        width: 80%;
-        font-size: 13px;
+        width: 88%;
+        font-size: 14px;
         line-height: 18px;
     }
 
-    .hero h1 {
+    .hero-principal-title {
+        position: absolute;
+        width: 90%;
         font-size: 2rem;
     }
 
@@ -83,23 +96,21 @@
 
 @media (max-width: 480px) {
     .hero img {
-        width: 100%;
-        position: static;
-        margin: 20px;
+        width: 153%;
+        margin-top: 130px;
     }
 
     .hero p {
-        width: 80%;
+        width: 79%;
         font-size: 12px;
-        line-height: 18px;
+        line-height: 19px;
     }
 
-    .hero h1 {
-        font-size: 1rem;
+    .hero-principal-title {
+        position: absolute;
     }
 
     .hero {
-        margin-top: 50px;
         gap: 15px;
     }
 }
