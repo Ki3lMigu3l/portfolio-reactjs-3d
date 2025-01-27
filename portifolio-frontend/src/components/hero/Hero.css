@@ -19,10 +19,11 @@
 }
 
 .hero-subtitle {
+    display: flex;
+    position: absolute;
     font-family: 'inter';
     font-weight: 600;
 }
-
 
 .hero-image {
     position: absolute;
@@ -30,4 +31,10 @@
     margin: 70px;
     width: 70%;
     border-radius: 1.4em;
+}
+
+.hero-title-projects {
+    margin-top: 15em;
+    font-family: 'poppins';
+    font-weight: 100;
 }

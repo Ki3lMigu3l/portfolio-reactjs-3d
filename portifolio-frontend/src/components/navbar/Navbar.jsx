@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="hamburguer" onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
       </div>
-      <div className={`nav-menu ${menuOpen ? "open" : ""}`}>
+      <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
             <a href="#home">Home</a>
