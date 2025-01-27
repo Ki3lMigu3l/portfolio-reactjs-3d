@@ -49,9 +49,9 @@ const Hero = () => {
         <h1>
           <span className="hero-subtitle">{text}</span>
         </h1>
+      <img src={banner} alt="Ezequiel Miguel" className="hero-image"/>
         <h1 className="hero-title-projects">Projetos</h1>
       </div>
-      <img src={banner} alt="Ezequiel Miguel" className="hero-image"/>
     </div>
   );
 };
