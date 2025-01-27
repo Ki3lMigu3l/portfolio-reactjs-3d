@@ -1,3 +1,72 @@
-.project-main-container {
-    
-}
+.projects-section {
+    padding: 2rem;
+    background-color: #000;
+  }
+  
+  .projects-title {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .project-card {
+    background: #191919;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 0px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 12px 0px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    color: #bbb;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+  
+  .project-technologies {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .tech-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.2);
+  }
+  
