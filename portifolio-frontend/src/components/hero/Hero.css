@@ -28,7 +28,6 @@
     position: absolute;
     top: 14em;
     margin: 70px;
-    width: 65%;
-    border-radius: 15px;
-    box-shadow: rgba(207, 207, 207, 0.177) 0px 7px 109px 0px;
+    width: 70%;
+    border-radius: 1.4em;
 }
