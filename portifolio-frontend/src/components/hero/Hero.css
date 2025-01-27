@@ -1,116 +1,34 @@
-.hero {
+.hero-main-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 35px;
-    margin-top: 115px;
+    justify-content: center;
+    flex-direction: column;
     overflow: hidden;
+    margin-top: 10.8em;
 }
 
-.hero-principal-title {
-    background: linear-gradient(267deg, #f2ce00c9, #e66a05cc, #ea00ffc5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.hero-text-container {
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.hero-title {
+    font-family: 'poppins';
+    font-weight: 100;
+}
+
+.hero-subtitle {
+    font-family: 'inter';
     font-weight: 600;
 }
 
-.hero-principal-title span {
-    background: linear-gradient(267deg, #f2ce00c9, #e66a05cc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-span {
-    font-weight: 600;
-}
-
-.hero img {
-    margin-bottom: 70px;
+.hero-image {
+    position: absolute;
+    top: 14em;
+    margin: 70px;
     width: 65%;
     border-radius: 15px;
-    box-shadow: rgba(100, 100, 111, 0.116) 0px 7px 29px 0px;
-}
-
-.hero p {
-    width: 50%;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 25px;
-}
-
-.hero-projects-title {
-    margin-top: 3em;
-}
-
-@media (max-width: 1024px) {
-    .hero img {
-        width: 120%;
-        border-radius: 0;
-        margin-top: 2em;
-        margin-bottom: 0;
-    }
-
-    .hero p {
-        margin-top: 3em;
-        width: 88%;
-        font-size: 16px;
-    }
-
-    .hero-principal-title {
-        font-size: 2rem;
-    }
-
-    .hero {
-        gap: 25px;
-        margin-top: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero img {
-        width: 140%;
-        margin-top: 110px;
-    }
-
-    .hero p {
-        width: 88%;
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    .hero-principal-title {
-        position: absolute;
-        width: 90%;
-        font-size: 2rem;
-    }
-
-    .hero {
-        margin-top: 80px;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero img {
-        width: 153%;
-        margin-top: 130px;
-    }
-
-    .hero p {
-        width: 79%;
-        font-size: 12px;
-        line-height: 19px;
-    }
-
-    .hero-principal-title {
-        position: absolute;
-    }
-
-    .hero {
-        gap: 15px;
-    }
+    box-shadow: rgba(207, 207, 207, 0.177) 0px 7px 109px 0px;
 }
