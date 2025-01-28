@@ -44,7 +44,7 @@
     display: none;
 }
 
-.navbar-menu {
+.navbar-menu ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #000000c8;
+    background-color: #000000e4;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -77,17 +77,16 @@
     }
 
     .navbar-menu {
-        position: fixed;
-        top: -50px;
-        left: 0;
-        width: 100%;
-        height: auto; 
-        background: #000000eb;
-        z-index: 998;
-        animation: slideDown 0.5s ease-in-out forwards;
+        display: none;
     }
 
-    .navbar-menu ul {
+    .navbar-menu.open {
+        display: block;
+        margin-top: -2.5em;
+    }
+
+    .navbar-menu.open ul {
+        height: 35vh;
         display: flex;
         justify-content: center;
         align-items: center;

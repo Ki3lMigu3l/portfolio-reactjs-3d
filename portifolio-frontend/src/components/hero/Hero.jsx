@@ -43,7 +43,7 @@ const Hero = () => {
   }, [text, isDeleting, index, typingSpeed]);
 
   return (
-    <div className="hero-main-container">
+    <div className="hero-main-container" id="home">
       <div className="hero-text-container">
         <h1 className="hero-title">I'm Ezequiel Miguel</h1>
         <h1>
