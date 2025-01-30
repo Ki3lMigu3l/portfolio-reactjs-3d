@@ -16,11 +16,22 @@
 }
 
 .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 0 0 20px;
     font-family: 'inter';
     font-weight: 600;
     font-size: 15px;
     line-height: 15px;
+}
+
+.navbar-logo h1 {
+    font-size: 0.9em;
+}
+
+.navbar-logo img {
+    width: 39px;
 }
 
 
@@ -105,6 +116,7 @@
         justify-content: space-between;
     }
 }
+
 
 @media screen and (min-width: 769px) {
     .navbar-menu {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import logo from "../../assets/logo-bg-rmv.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ const Navbar = () => {
   return (
 
     <div className="navbar">
-      <div className="navbar-logo" >Ezcoder</div>
+
+      <div className="navbar-logo" >       
+        <img src={logo} alt="Logo Ezcoder" className="navbar-logo-img"/><h1>Ezcoder</h1></div>
       <div className="hamburguer" onClick={toggleMenu}>
           <i className="fa-solid fa-bars"></i>
       </div>
