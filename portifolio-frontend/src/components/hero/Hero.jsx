@@ -43,14 +43,14 @@ const Hero = () => {
   }, [text, isDeleting, index, typingSpeed]);
 
   return (
-    <div className="hero-main-container" id="home">
+    <div className="hero-main-container" >
       <div className="hero-text-container">
-        <h1 className="hero-title">I'm Ezequiel Miguel</h1>
+        <h1 className="hero-title" id='home'>I'm Ezequiel Miguel</h1>
         <h1>
           <span className="hero-subtitle">{text}</span>
         </h1>
-      <img src={banner} alt="Ezequiel Miguel" className="hero-image"/>
-        <h1 className="hero-title-projects">Projetos</h1>
+      <img src={banner} alt="Ezequiel Miguel" className="hero-image"  />
+        <h1 className="hero-title-projects"id='projects'>Projetos</h1>
       </div>
     </div>
   );

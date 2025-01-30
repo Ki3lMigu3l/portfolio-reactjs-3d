@@ -44,7 +44,7 @@ const techIcons = {
 
 const Project = () => {
   return (
-    <section className="projects-section" id='projects'>
+    <section className="projects-section">
     <div className="projects-grid">
       {projects.map((project) => (
         <div key={project.id} className="project-card">

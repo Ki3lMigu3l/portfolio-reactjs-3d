@@ -10,8 +10,9 @@ const Navbar = () => {
   };
 
   return (
+
     <div className="navbar">
-      <div className="navbar-logo">Ezcoder</div>
+      <div className="navbar-logo" >Ezcoder</div>
       <div className="hamburguer" onClick={toggleMenu}>
           <i className="fa-solid fa-bars"></i>
       </div>

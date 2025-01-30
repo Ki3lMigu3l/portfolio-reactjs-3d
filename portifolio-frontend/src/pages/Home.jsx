@@ -8,7 +8,7 @@ import About from '../components/about/About'
 
 function Home() {
   return (
-    <><><Navbar /><Hero /></><Project/><About/></>
+    <><><Navbar/><Hero/></><Project/><About/></>
   )
 }
 

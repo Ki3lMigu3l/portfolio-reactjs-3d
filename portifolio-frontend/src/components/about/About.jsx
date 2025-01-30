@@ -3,9 +3,9 @@ import './About.css'
 
 function About() {
   return (
-    <section className="about-me-container">
+    <section className="about-me-container" id='aboutme'>
     <div className="about-me-content">
-      <h1 className="about-me-title" id='aboutme'>Sobre Mim</h1>
+      <h1 className="about-me-title" >Sobre Mim</h1>
       <p className="about-me-description">
         Meu nome é <strong>Ezequiel Miguel</strong>, sou graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> e tenho mais de <strong>dois anos de experiência</strong> na área de tecnologia.  
       </p>
