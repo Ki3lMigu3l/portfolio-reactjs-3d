@@ -49,7 +49,7 @@ const Hero = () => {
         <h1>
           <span className="hero-subtitle">{text}</span>
         </h1>
-      <img src={banner} alt="Ezequiel Miguel" className="hero-image"  />
+      <img src={banner} alt="Banner Ezcoder Portifolio de desenvolvimento" className="hero-image"  />
         <h1 className="hero-title-projects"id='projects'>Projetos</h1>
       </div>
     </div>

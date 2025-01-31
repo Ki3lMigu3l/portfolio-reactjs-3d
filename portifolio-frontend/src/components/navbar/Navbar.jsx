@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="navbar">
 
       <div className="navbar-logo" >       
-        <img src={logo} alt="Logo Ezcoder" className="navbar-logo-img"/><h1>Ezcoder</h1></div>
+        <img src={logo} alt="Logo da Ezcoder" className="navbar-logo-img"/><h1>Ezcoder</h1></div>
       <div className="hamburguer" onClick={toggleMenu}>
           <i className="fa-solid fa-bars"></i>
       </div>
