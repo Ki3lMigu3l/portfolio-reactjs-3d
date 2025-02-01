@@ -14,15 +14,15 @@
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 0rem;
+    margin: 2rem 12rem;
   }
   
   .project-card {
+    margin: 1rem 1rem;
     background: #191919;
-    border-radius: 0.8rem;
+    border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 0px;
-    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
@@ -33,8 +33,10 @@
   
   .project-image {
     width: 100%;
-    height: 300px;
+    height: 250px;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
     object-fit: cover;
+    box-shadow: rgba(113, 113, 113, 0.259) 0px 7px 150px 0px;
   }
   
   .project-content {
@@ -44,15 +46,15 @@
   .project-title {
     font-family: 'inter', sans-serif;
     font-size: 1.25rem;
-    color: #bbb;
+    color: #ccc;
     margin-bottom: 0.2rem;
   }
   
   .project-description {
     font-family: 'inter', sans-serif;
     font-size: 0.9rem;
-    color: #999;
-    margin-bottom: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.6rem;
   }
   
   .project-technologies {
@@ -73,3 +75,88 @@
     transform: scale(1.2);
   }
   
+  @media (max-width: 1280px) {
+    .projects-section {
+      margin-top: 4rem;
+      padding: 1rem 20rem;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      box-shadow: rgba(113, 113, 113, 0.259) 0px 7px 150px 0px;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+      padding: 0rem;
+      margin: 0rem;
+    }
+
+  }
+
+  @media (max-width: 1024px) {
+    .projects-section {
+      margin-top: 4rem;
+      padding: 1rem 12rem;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      box-shadow: rgba(113, 113, 113, 0.259) 0px 7px 150px 0px;
+    }
+    
+
+    .projects-grid {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+
+    .projects-section {
+      margin-top: 4rem;
+      padding: 1rem 6rem;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      box-shadow: rgba(113, 113, 113, 0.259) 0px 7px 150px 0px;
+    }
+    
+
+    .projects-grid {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+
+    .projects-section {
+      margin-top: 4rem;
+      padding: 0.1rem;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: rgba(113, 113, 113, 0.259) 0px 7px 150px 0px;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+      padding: 0rem;
+      margin: 0rem;
+    }
+
+  }
