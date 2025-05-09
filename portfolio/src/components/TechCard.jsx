@@ -49,7 +49,7 @@ const techCards = [
     description:
       "API RESTful desenvolvida com Spring Boot no backend e React no frontend, utilizando MySQL para armazenamento e TailwindCSS para estilização, para gerenciar itens de cardápio de maneira simples e eficiente.",
     details:
-      "Cardápio API Fullstack é uma aplicação completa que integra um backend robusto com Spring Boot e um frontend dinâmico em React, voltada para a gestão de cardápios de restaurante. A API permite CRUD de itens de cardápio, com persistência em MySQL e interface moderna com TailwindCSS Toda a aplicação é containerizada com Docker, permitindo a execução de backend, frontend e banco de dados com um único comando. A documentação interativa é gerada automaticamente via Swagger, e a confiabilidade do backend é garantida por testes unitários com JUnit5 O frontend em React proporciona navegação ágil e responsiva, com um design minimalista e intuitivo.",
+      "Cardápio API Fullstack é uma aplicação completa que integra um backend robusto com Spring Boot e um frontend dinâmico em React, voltada para a gestão de cardápios de restaurante. A API permite CRUD de itens de cardápio, com persistência em MySQL e interface moderna com TailwindCSS Toda a aplicação é containerizada com Docker, permitindo a execução de backend, frontend e banco de dados com um único comando. A documentação interativa é gerada automaticamente via Swagger, e a confiabilidade do backend é garantida por testes unitários com JUnit5 O frontend em React proporciona navegação ágil e responsiva, com um design minimalista e intuitivo. ",
     technologies: [
       "git",
       "java",
