@@ -1,5 +1,4 @@
-// components/AnimatedHackerRoom.jsx
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { HackerRoom } from "./HackerRoom";
@@ -7,11 +6,27 @@ import { HackerRoom } from "./HackerRoom";
 export default function AnimatedHackerRoom() {
   const groupRef = useRef();
   const [startTime] = useState(() => performance.now());
+  const [isMobile, setIsMobile] = useState(false);
 
-  const startPosition = new THREE.Vector3(1.5, -20, 10);
-  const endPosition = new THREE.Vector3(1.5, -9, 10);
+  // Detecta tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Valores diferentes para desktop e mobile
+  const startPosition = isMobile
+    ? new THREE.Vector3(0, -15, 18)
+    : new THREE.Vector3(1.5, -20, 10);
+  const endPosition = isMobile
+    ? new THREE.Vector3(0, -5, 16)
+    : new THREE.Vector3(1, -8, 18);
   const startScale = 0;
-  const endScale = 0.07;
+  const endScale = isMobile ? 0.05 : 0.07;
   const startRotation = new THREE.Euler(0, 0, 0);
   const endRotation = new THREE.Euler(0.6, 2.8, 0);
 

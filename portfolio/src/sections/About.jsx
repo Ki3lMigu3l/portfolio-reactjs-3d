@@ -1,22 +1,23 @@
-import React from "react";
 import about from "/assets/about.jpg";
 
 const About = () => {
   return (
-    <section className="mt-83 mb-30 sm:px-10 px-5" id="about">
-      <div className="fixed inset-0 -z-10 animate-gradient bg-gradient-to-r from-[#00000041] via-[#1a1a1a98] to-[#0000008d] bg-[length:200%_200%]"></div>
-
-      <div className="bg-[#1f1f1f27] rounded-2xl shadow-xl overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row animate-glow">
+    <section
+      className="lg:mt-55 mb-20 sm:px-10 px-5 
+      scroll-mt-23 md:scroll-mt-25"
+      id="about"
+    >
+      <div className="bg-[#1f1f1f27] rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto flex flex-col xl:flex-row xl:max-w-6xl items-center animate-glow-bottom">
         {/* imagem */}
-        <div className="w-full md:w-1/3 h-80 md:h-auto">
+        <div className="w-full h-75 md:h-95 lg:h-110 xl:w-2/3 xl:h-full">
           <img
             src={about}
             alt="ezequiel miguel"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover md:object-[center_30%] lg:object-[center_30%] xl:object-cover"
           />
         </div>
         {/* texto */}
-        <div className="w-full md:w-2/3 p-1 md:p-5 gap-5 flex flex-col items-center justify-center text-white text-center md:text-left">
+        <div className="w-full gap-5 flex flex-col items-center justify-center text-white text-center">
           <h4 className="text-center xl:text-2xl md:text-2xl sm:text-xl text-2xl font-semibold bg-gradient-to-r from-[#bec1cf] from-60% via-[#D5D8EA] via-60% to-[#d5d8ea] to-100% bg-clip-text text-transparent mt-5">
             About me
           </h4>

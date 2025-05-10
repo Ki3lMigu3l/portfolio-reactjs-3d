@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import menu from "/assets/menu.svg";
 import close from "/assets/close.svg";
 import logo from "/assets/logo.png";
@@ -26,24 +26,44 @@ const NavItems = () => {
 };
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 5);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
 
   return (
-    <header className="fixed py-0 top-0 left-0 right-0 z-50 bg-black/90 text-white">
+    <header
+      id="home"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/95 text-white shadow-md py-2"
+          : "bg-transparent text-white py-1"
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-5 mx-auto sm:px-10 px-5">
-          <a
-            href="/"
-            className="flex items-center gap-2 text-neutral-400 font-semibold text-md hover:text-white transition-colors"
-          >
+        <div className="flex justify-between items-center py-4 mx-auto sm:px-10 px-4">
+          <div className="flex items-center gap-2 ">
             <img
               src={logo}
               alt="Logo"
               className="w-9 h-9 rounded-full overflow-hidden shadow-lg"
             />
-            Ezcoder
-          </a>
+            <a
+              href="/"
+              className="text-neutral-200 font-semibold text-lg hover:text-white transition-colors hidden md:block"
+            >
+              Ezcoder
+            </a>
+          </div>
 
           <button
             onClick={toggleMenu}

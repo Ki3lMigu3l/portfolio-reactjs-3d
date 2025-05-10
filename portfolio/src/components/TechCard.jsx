@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const techCards = [
   {
     image: "/projects/cordarius.png",
-    title: "Cordarius Delivery - Plataforma de Delivery Responsiva",
+    title: "Cordarius Delivery: Plataforma de Delivery",
     description:
       "Desenvolvi uma plataforma de delivery responsiva, focada em uma experiência de usuário intuitiva, sem depender de backend ou banco de dados, garantindo alta performance e funcionalidade.",
     details:
@@ -14,7 +14,7 @@ const techCards = [
   },
   {
     image: "/projects/mibo.png",
-    title: "Plataforma de Gestão de Dispositivos Intelbras",
+    title: "Mibo API: Plataforma de Gestão de Dispositivos Intelbras",
     description:
       "Aplicação full stack (Spring, Angular, MySQL, TailwindCSS) integrada à API da Intelbras para gestão de dispositivos de segurança, aumentando a eficiência na administração e atendimento técnico.",
     details:
@@ -34,7 +34,7 @@ const techCards = [
   },
   {
     image: "/projects/portfolio.png",
-    title: "Ezcoder - Portfolio Profissional",
+    title: "Ezcoder: Portfolio Profissional",
     description:
       "Desenvolvi uma página de portfolio responsiva utilizando React e TailwindCSS, projetada como uma vitrine interativa para exibir projetos, habilidades e exeriencias de forma moderna e dinâmica.",
     details:
@@ -45,7 +45,7 @@ const techCards = [
   },
   {
     image: "/projects/cardapio.png",
-    title: "Cardápio API Fullstack - Gestão de Cardápio de Restaurante",
+    title: "Cardápio API: Gestão de Cardápio de Restaurante",
     description:
       "API RESTful desenvolvida com Spring Boot no backend e React no frontend, utilizando MySQL para armazenamento e TailwindCSS para estilização, para gerenciar itens de cardápio de maneira simples e eficiente.",
     details:
@@ -123,6 +123,33 @@ const techIcons = {
 const TechCard = () => {
   const [selectedCard, setSelectedCard] = useState(null);
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = `/js/finisher-header.es5.min.js`;
+    script.async = true;
+
+    script.onload = () => {
+      new window.FinisherHeader({
+        count: 46,
+        size: { min: 2, max: 8, pulse: 0 },
+        speed: {
+          x: { min: 0, max: 0.4 },
+          y: { min: 0, max: 0.6 },
+        },
+        colors: {
+          background: "#0d0d0d",
+          particles: ["#ff926b", "#87ddfe", "#acaaff", "#1bffc2", "#f9a5fe"],
+        },
+        blending: "lighten",
+        opacity: { center: 1, edge: 0 },
+        skew: 0,
+        shapes: ["c"],
+      });
+    };
+
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <>
       {/* Grid de cards */}
@@ -131,7 +158,7 @@ const TechCard = () => {
           <div
             key={index}
             onClick={() => setSelectedCard(card)}
-            className="rounded-2xl shadow-xl h-full object-cover overflow-hidden flex flex-col cursor-pointer transform transition duration-300 bg-[#1f1f1f27] hover:scale-[1.03]"
+            className="rounded-2xl shadow-xl h-full object-cover overflow-hidden flex flex-col cursor-pointer transform transition duration-300 bg-[#0E0E0E] hover:scale-[1.03]"
           >
             <img
               src={card.image}
@@ -139,7 +166,7 @@ const TechCard = () => {
               className="w-full h-full object-cover"
             />
             <div className="p-5 flex flex-col flex-1 text-white">
-              <h5 className="font-bold text-lg mb-2">{card.title}</h5>
+              <h5 className="font-bold text-md mb-4">{card.title}</h5>
               <p className="text-sm text-[#D5D8EA]">{card.description}</p>
             </div>
             <div className="flex flex-wrap gap-2 px-5 pb-5 mt-auto">
