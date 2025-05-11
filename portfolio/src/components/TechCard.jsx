@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const techCards = [
   {
@@ -123,37 +123,10 @@ const techIcons = {
 const TechCard = () => {
   const [selectedCard, setSelectedCard] = useState(null);
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = `/js/finisher-header.es5.min.js`;
-    script.async = true;
-
-    script.onload = () => {
-      new window.FinisherHeader({
-        count: 46,
-        size: { min: 2, max: 8, pulse: 0 },
-        speed: {
-          x: { min: 0, max: 0.4 },
-          y: { min: 0, max: 0.6 },
-        },
-        colors: {
-          background: "#0d0d0d",
-          particles: ["#ff926b", "#87ddfe", "#acaaff", "#1bffc2", "#f9a5fe"],
-        },
-        blending: "lighten",
-        opacity: { center: 1, edge: 0 },
-        skew: 0,
-        shapes: ["c"],
-      });
-    };
-
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <>
       {/* Grid de cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto mt-16 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-400 mx-auto mt-16 px-4">
         {techCards.map((card, index) => (
           <div
             key={index}
@@ -163,13 +136,13 @@ const TechCard = () => {
             <img
               src={card.image}
               alt={card.title}
-              className="w-full h-full object-cover"
+              className="w-full h-40 object-cover"
             />
-            <div className="p-5 flex flex-col flex-1 text-white">
-              <h5 className="font-bold text-md mb-4">{card.title}</h5>
+            <div className="p-3 flex flex-col flex-1 text-white">
+              <h5 className="font-bold text-md mb-3">{card.title}</h5>
               <p className="text-sm text-[#D5D8EA]">{card.description}</p>
             </div>
-            <div className="flex flex-wrap gap-2 px-5 pb-5 mt-auto">
+            <div className="flex justify-center items-center gap-2 px-5 pb-5 mt-auto">
               {card.technologies.map((tech, idx) => (
                 <img
                   key={idx}
@@ -186,66 +159,87 @@ const TechCard = () => {
 
       {/* Modal */}
       {selectedCard && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60 backdrop-blur-md px-4">
-          <div className="bg-[#000000] max-w-2xl w-full rounded-sm p-6 text-white relative shadow-2xl animate-fade-in animate-glow">
-            {/* Botão fechar */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60 backdrop-blur-sm px-4 rounded-xl">
+          <div className="max-w-2xl w-full rounded-sm p-6 text-white relative shadow-2xl animate-fade-in animate-glow bg-[#0D0907]">
+            {/* Botão para fechar */}
             <button
               onClick={() => setSelectedCard(null)}
-              className="absolute top-0 right-1 text-white rounded-full p-1 transition cursor-pointer text-sm"
+              className="absolute top-[-2px] right-[6px] text-white rounded-full p-1 transition cursor-pointer text-sm"
             >
-              ✕
+              x
             </button>
 
-            {/* Conteúdo */}
+            {/* Conteudo */}
             <img
               src={selectedCard.image}
               alt={selectedCard.title}
-              className="w-full h-full object-cover rounded-md"
+              className="w-full h-50 object-cover rounded-md"
             />
-            <h2 className="mt-3 text-2xl font-bold mb-2">
+            <h3 className="mt-5 mb-3 font-bold text-xl">
               {selectedCard.title}
-            </h2>
-            <p className="text-sm text-[#D5D8EA] mb-4">
+            </h3>
+            <p className="text-sm p-selectedCard mb-8">
               {selectedCard.details}
             </p>
-            <div className="flex flex-wrap gap-2 mb-5">
+
+            <div className="flex flex-wrap justify-center items-center gap-2 mb-7 mt-auto">
               {selectedCard.technologies.map((tech, idx) => (
                 <img
                   key={idx}
                   src={techIcons[tech]}
                   alt={tech}
                   title={tech}
-                  className="w-7 h-7 transform transition duration-300 hover:scale-[1.05] cursor-pointer"
+                  className="w-9 h-9 transform transition duration-300 hover:scale-[1.05] cursor-pointer"
                 />
               ))}
             </div>
-            {selectedCard.link && (
-              <div className="flex gap-5">
-                <a
-                  href={selectedCard.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 px-6 py-2 rounded-lg  bg-gradient-to-l from-[#3b0a45] via-[#7a2e64] to-[#9e3d59] 
-               text-white font-normal text-sm md:text-base shadow-md 
-               focus:outline-none focus:ring-2 focus:ring-[#555] active:scale-95 hover:transform hover:scale-105 transition-all duration-500 
-  ease-in-out hover:brightness-110 hover:shadow-2xl "
-                >
-                  Ver Projeto
-                </a>
 
-                <a
-                  href={selectedCard.repository}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 px-6 py-2 rounded-lg  bg-gradient-to-l from-[#9e3d59] via-[#7a2e64] to-[#3b0a45]
-                           text-white font-normal text-sm md:text-base shadow-md 
-                           focus:outline-none focus:ring-2 focus:ring-[#555] active:scale-95 hover:transform hover:scale-105 transition-all duration-500 
-              ease-in-out hover:brightness-110 hover:shadow-2xl cursor-pointer"
-                >
-                  Repositorio
-                </a>
-              </div>
-            )}
+            <div>
+              {selectedCard.link && (
+                <div className="flex justify-center items-center gap-8">
+                  <a
+                    href={selectedCard.link}
+                    class="relative bottom-0 flex justify-center items-center gap-2 border border-[#000] rounded-xl text-[#FFF] font-black bg-[#000] uppercase px-8 py-4 z-10 overflow-hidden ease-in-out duration-700 group hover:text-[#000] hover:bg-[#FFF] active:scale-95 active:duration-0 focus:bg-[#FFF] focus:text-[#000] isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700"
+                  >
+                    <span class="truncate eaes-in-out duration-300 group-active:-translate-x-96 group-focus:translate-x-96 text-sm">
+                      Testar Aplicação
+                    </span>
+                    <div class="absolute flex flex-row justify-center items-center gap-2 -translate-x-96 eaes-in-out duration-300 group-active:translate-x-0 group-focus:translate-x-0">
+                      <div class="animate-spin size-4 border-2 border-[#000] border-t-transparent rounded-full"></div>
+                      Processing...
+                    </div>
+                    <svg
+                      class="fill-[#FFF] group-hover:fill-[#000] group-hover:-translate-x-0 group-active:translate-x-96 group-active:duration-0 group-focus:translate-x-96 group-focus:fill-[#000] ease-in-out duration-700"
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      height="16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="m476.59 227.05-.16-.07L49.35 49.84A23.56 23.56 0 0 0 27.14 52 24.65 24.65 0 0 0 16 72.59v113.29a24 24 0 0 0 19.52 23.57l232.93 43.07a4 4 0 0 1 0 7.86L35.53 303.45A24 24 0 0 0 16 327v113.31A23.57 23.57 0 0 0 26.59 460a23.94 23.94 0 0 0 13.22 4 24.55 24.55 0 0 0 9.52-1.93L476.4 285.94l.19-.09a32 32 0 0 0 0-58.8z"></path>
+                    </svg>
+                  </a>
+
+                  <a
+                    href={selectedCard.repository}
+                    class="cursor-pointer flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-9 px-4 py-2 max-w-52 whitespace-pre md:flex group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2"
+                  >
+                    <span class="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
+                    <div class="flex items-center">
+                      <svg
+                        class="w-4 h-4 fill-current"
+                        viewBox="0 0 438.549 438.549"
+                      >
+                        <path d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"></path>
+                      </svg>
+                      <span class="ml-2 text-white">Explorar código</span>
+                    </div>
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
