@@ -61,7 +61,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="my-30 py-0 px-1 text-white scroll-mt-30 md:scroll-mt-35"
+      className="my-30 py-0 px-1 text-white scroll-mt-30 md:scroll-mt-35 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-center text-3xl sm:text-4xl text-white mb-3">

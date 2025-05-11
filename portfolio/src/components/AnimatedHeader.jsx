@@ -66,10 +66,10 @@ const AnimatedHeader = () => {
 
   return (
     <section
-      className="finisher-header w-full h-145 sm:h-150 md:h-208 xl:h-210 2xl:h-232 scroll-mt-45"
+      className="finisher-header w-full h-183 sm:h-150 md:h-208 xl:h-210 2xl:h-232 scroll-mt-45"
       id="home"
     >
-      <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-8 mt-25 sm:mt-32 md:mt-42 lg:mt-25 xl:mt-40 2xl:mt-40">
+      <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-8 mt-40 sm:mt-32 md:mt-42 lg:mt-25 xl:mt-40 2xl:mt-40">
         <h1 className="xl:text-6xl md:text-5xl sm:text-4xl text-5xl font-medium text-white text-center ">
           Hi, i'm Ezequiel
         </h1>
