@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import AnimatedHeader from "./components/AnimatedHeader";
+import Footer from "./sections/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Experience />
         <Projects />
       </main>
+      <Footer />
     </div>
   );
 };
