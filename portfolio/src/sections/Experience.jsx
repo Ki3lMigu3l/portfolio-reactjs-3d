@@ -59,159 +59,91 @@ const cardVariant = {
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="my-30 py-0 px-1 text-white scroll-mt-30 md:scroll-mt-35 overflow-hidden"
-    >
-      {/* <div className="relative w-full">
-        
-        <div className="absolute left-1/2 top-0 w-[2px] h-full bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" /> */}
+    <section id="experience" className="scroll-mt-36 px-4 text-white">
+      <section className="my-30 py-0 px-1 text-white overflow-hidden">
+        <div className="relative max-w-6xl mx-auto">
+          <h2 className="text-center text-3xl sm:text-4xl text-white mb-3">
+            Experiência Profissional
+          </h2>
 
-      {/* Lista de experiências */}
-      {/* <div className="flex flex-col space-y-14 relative z-10">
-          {experiences.map((exp, i) => {
-            const isLeft = i % 2 === 0;
+          <div className="relative max-w-7xl mx-auto px-4 lg:px-6 z-20 py-24">
+            {/* Linha vertical central */}
+            <div className="absolute left-1/2 top-0 w-[2px] h-268 lg:h-250 xl:h-230 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
 
-            return (
-              <div
-                key={i}
-                className={`relative flex w-full ${
-                  isLeft ? "justify-start" : "justify-end"
-                }`}
-              >
-                <motion.div
-                  initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: i * 0.15,
-                    duration: 0.6,
-                    type: "spring",
-                    stiffness: 60,
-                  }}
-                  className="w-full md:max-w-xl lg:max-w-md xl:max-w-130 px-4 py-6 lg:px-3 lg:py-5 bg-white/5 border border-gray-600 rounded-2xl shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-[1.02] cursor-pointer relative z-20"
-                >
-                  <div className="flex flex-col items-center justify-between mb-4">
-                    <h3 className="text-md font-semibold text-center text-white">
-                      {exp.role}
-                    </h3>
-                    <span className="flex items-center text-sm text-gray-400">
-                      <Calendar size={15} className="mr-1" />
-                      {exp.startDate} – {exp.endDate}
-                    </span>
-                  </div>
+            {/* Marcador central */}
+            <span className="absolute hidden lg:block top-65 xl:top-60 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
 
-                  <div className="flex flex-col items-center text-sm text-gray-300 mb-8 gap-1">
-                    <strong className="flex flex-row items-center">
-                      <Briefcase size={15} className="mr-1" />
-                      {exp.company}
-                    </strong>
-                    <span className="flex flex-row items-center">
-                      <MapPin size={15} className="ml-2 mr-1" />
-                      {exp.location}
-                    </span>
-                  </div>
+            <span className="absolute hidden lg:block top-160 xl:top-150 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
 
-                  <ul className="list-disc list-inside space-y-2 text-sm text-gray-200 pl-1 md:pl-2">
-                    {exp.highlights.map((item, idx) => (
-                      <motion.li
-                        key={idx}
-                        whileHover={{ scale: 1.03 }}
-                        className="transition-all duration-500"
-                      >
-                        {item}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
+            <span className="absolute hidden lg:block top-247 xl:top-230 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
 
-      <div className="relative max-w-6xl mx-auto">
-        <h2 className="text-center text-3xl sm:text-4xl text-white mb-3">
-          Experiência Profissional
-        </h2>
+            {/* Lista de experiências */}
+            <div className="flex flex-col space-y-14 relative z-10">
+              {experiences.map((exp, i) => {
+                const isLeft = i % 2 === 0;
 
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-6 z-20 py-24">
-          {/* Linha vertical central */}
-          <div className="absolute left-1/2 top-0 w-[2px] h-268 lg:h-250 xl:h-230 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
-
-          {/* Marcador central */}
-          <span className="absolute hidden lg:block top-65 xl:top-60 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
-
-          <span className="absolute hidden lg:block top-160 xl:top-150 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
-
-          <span className="absolute hidden lg:block top-247 xl:top-230 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
-
-          {/* Lista de experiências */}
-          <div className="flex flex-col space-y-14 relative z-10">
-            {experiences.map((exp, i) => {
-              const isLeft = i % 2 === 0;
-
-              return (
-                <div
-                  key={i}
-                  className={`relative z-20 flex w-full ${
-                    isLeft ? "justify-start" : "justify-end"
-                  }`}
-                >
-                  <motion.div
-                    initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: i * 0.15,
-                      duration: 0.6,
-                      type: "spring",
-                      stiffness: 60,
-                    }}
-                    className="backdrop-blur-md relative z-20"
+                return (
+                  <div
+                    key={i}
+                    className={`relative z-20 flex w-full ${
+                      isLeft ? "justify-start" : "justify-end"
+                    }`}
                   >
-                    {/* Card */}
-                    <div className="w-full md:max-w-xl lg:max-w-md xl:max-w-130 px-4 py-6 lg:px-3 lg:py-5 bg-white/5 border border-gray-600 rounded-2xl shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-[1.02] cursor-pointer">
-                      <div className="flex flex-col items-center justify-between mb-4">
-                        <h3 className="text-md font-semibold text-center text-white">
-                          {exp.role}
-                        </h3>
-                        <span className="flex items-center text-sm text-gray-400">
-                          <Calendar size={15} className="mr-1" />
-                          {exp.startDate} – {exp.endDate}
-                        </span>
-                      </div>
+                    <motion.div
+                      initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: i * 0.15,
+                        duration: 0.6,
+                        type: "spring",
+                        stiffness: 60,
+                      }}
+                      className="backdrop-blur-md relative z-20"
+                    >
+                      {/* Card */}
+                      <div className="w-full md:max-w-xl lg:max-w-md xl:max-w-130 px-4 py-6 lg:px-3 lg:py-5 bg-white/5 border border-gray-600 rounded-2xl shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-[1.02] cursor-pointer">
+                        <div className="flex flex-col items-center justify-between mb-4">
+                          <h3 className="text-md font-semibold text-center text-white">
+                            {exp.role}
+                          </h3>
+                          <span className="flex items-center text-sm text-gray-400">
+                            <Calendar size={15} className="mr-1" />
+                            {exp.startDate} – {exp.endDate}
+                          </span>
+                        </div>
 
-                      <div className="flex flex-col items-center text-sm text-gray-300 mb-8 gap-1">
-                        <strong className="flex flex-row items-center">
-                          <Briefcase size={15} className="mr-1" />
-                          {exp.company}
-                        </strong>
-                        <span className="flex flex-row items-center">
-                          <MapPin size={15} className="ml-2 mr-1" />
-                          {exp.location}
-                        </span>
-                      </div>
+                        <div className="flex flex-col items-center text-sm text-gray-300 mb-8 gap-1">
+                          <strong className="flex flex-row items-center">
+                            <Briefcase size={15} className="mr-1" />
+                            {exp.company}
+                          </strong>
+                          <span className="flex flex-row items-center">
+                            <MapPin size={15} className="ml-2 mr-1" />
+                            {exp.location}
+                          </span>
+                        </div>
 
-                      <ul className="list-disc list-inside space-y-2 text-sm text-gray-200 pl-1 md:pl-2">
-                        {exp.highlights.map((item, idx) => (
-                          <motion.li
-                            key={idx}
-                            whileHover={{ scale: 1.03 }}
-                            className="transition-all duration-500"
-                          >
-                            {item}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                </div>
-              );
-            })}
+                        <ul className="list-disc list-inside space-y-2 text-sm text-gray-200 pl-1 md:pl-2">
+                          {exp.highlights.map((item, idx) => (
+                            <motion.li
+                              key={idx}
+                              whileHover={{ scale: 1.03 }}
+                              className="transition-all duration-500"
+                            >
+                              {item}
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 }
