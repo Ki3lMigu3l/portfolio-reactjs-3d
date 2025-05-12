@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { X } from "lucide-react";
 
 const techCards = [
   {
     image: "/projects/cordarius.png",
     title: "Cordarius Delivery: Plataforma de Delivery",
     description:
-      "Desenvolvi uma plataforma de delivery responsiva, focada em uma experiência de usuário intuitiva, sem depender de backend ou banco de dados, garantindo alta performance e funcionalidade.",
+      "Desenvolvi uma plataforma de delivery responsiva e funcional, com foco em usabilidade, alta performance e sem dependência de backend ou banco de dados.",
     details:
-      "O Cordarius Delivery é uma aplicação web totalmente responsiva, projetada para funcionar sem a necessidade de integração com servidores ou banco de dados. Utilizando tecnologias como React e Tailwind, a plataforma proporciona uma navegação fluida e fácil, tanto em dispositivos móveis quanto em desktops. A solução foi idealizada para oferecer uma experiência de usuário simples, rápida e eficiente, simulando o processo de um serviço de delivery de maneira funcional e sem a complexidade de um sistema tradicional com backend. A interface foi desenvolvida para ser intuitiva e adaptável, com foco na agilidade do processo de pedido e entrega.",
+      "O Cordarius Delivery é uma aplicação web totalmente responsiva, desenvolvida com React e Tailwind, que simula de forma funcional um serviço de delivery sem utilizar servidores ou banco de dados. Projetada para ser leve e eficiente, oferece uma navegação fluida, interface intuitiva e adaptável a diferentes dispositivos, focando na agilidade do processo de pedido e entrega.",
     technologies: ["git", "react", "tailwind"],
     link: "https://cordarius-delivery.vercel.app/",
     repository: "https://github.com/Ki3lMigu3l/cordarius-delivery-fullstack",
@@ -16,9 +17,9 @@ const techCards = [
     image: "/projects/mibo.png",
     title: "Mibo API: Plataforma de Gestão de Dispositivos Intelbras",
     description:
-      "Aplicação full stack (Spring, Angular, MySQL, TailwindCSS) integrada à API da Intelbras para gestão de dispositivos de segurança, aumentando a eficiência na administração e atendimento técnico.",
+      "Aplicação full stack (Spring, Angular, MySQL, TailwindCSS) integrada à API da Intelbras para gerenciamento de dispositivos, otimizando a administração e o suporte técnico.",
     details:
-      "Desenvolvi uma plataforma robusta utilizando o Spring no backend e Angular no frontend, com MySQL para armazenamento de dados e TailwindCSS para um design moderno e responsivo. A integração com a API da Intelbras permite o gerenciamento em tempo real de dispositivos de segurança, proporcionando consultas de dados, controle de dispositivos e administração de contas para técnicos e administradores. A solução resultou em uma redução de 60% no tempo de atendimento e resolução de problemas técnicos, devido à interface amigável e ao controle centralizado, que facilita a operação e minimiza erros humanos.",
+      "Desenvolvi uma plataforma robusta com Spring (backend), Angular (frontend), MySQL e TailwindCSS, integrando a API da Intelbras para gerenciamento em tempo real de dispositivos de segurança. A solução permite consultas, controle e administração centralizada por técnicos e administradores. Com interface intuitiva e design responsivo, reduziu em 60% o tempo de atendimento e resolução de problemas técnicos, otimizando operações e minimizando erros humanos.",
     technologies: [
       "git",
       "java",
@@ -36,9 +37,9 @@ const techCards = [
     image: "/projects/portfolio.png",
     title: "Ezcoder: Portfolio Profissional",
     description:
-      "Desenvolvi uma página de portfolio responsiva utilizando React e TailwindCSS, projetada como uma vitrine interativa para exibir projetos, habilidades e exeriencias de forma moderna e dinâmica.",
+      "Desenvolvi uma página de portfólio responsiva com React e TailwindCSS, destacando projetos, habilidades e experiências de forma moderna, dinâmica e interativa.",
     details:
-      "A página de portfolio foi construída com React para garantir uma experiência de usuário interativa e rápida, e com TailwindCSS para um design flexível e personalizável. A solução oferece uma interface moderna e responsiva, adaptando-se a diferentes tamanhos de tela, desde dispositivos móveis até desktops. O foco principal é apresentar de maneira clara e atrativa projetos anteriores, habilidades técnicas e informações de contato. A estrutura modular permite fácil atualização e personalização, tornando-a ideal para quem deseja uma presença online profissional e bem estruturada. Além disso, a utilização de React garante uma navegação fluida e dinâmica, enquanto o TailwindCSS proporciona um design minimalista e elegante.",
+      "A página de portfólio foi desenvolvida com React e TailwindCSS, oferecendo uma experiência interativa, responsiva e com design moderno. Apresenta projetos, habilidades e contatos de forma clara e atrativa, adaptando-se a qualquer dispositivo. A estrutura modular facilita atualizações, enquanto React garante fluidez e Tailwind um visual elegante e minimalista.",
     technologies: ["git", "react", "tailwind"],
     link: "https://github.com/Ki3lMigu3l/portfolio-reactjs-3d",
     repository: "https://github.com/Ki3lMigu3l/portfolio-reactjs-3d",
@@ -47,9 +48,9 @@ const techCards = [
     image: "/projects/cardapio.png",
     title: "Cardápio API: Gestão de Cardápio de Restaurante",
     description:
-      "API RESTful desenvolvida com Spring Boot no backend e React no frontend, utilizando MySQL para armazenamento e TailwindCSS para estilização, para gerenciar itens de cardápio de maneira simples e eficiente.",
+      "API RESTful desenvolvida com Spring Boot no backend e React no frontend, utilizando MySQL para armazenamento e TailwindCSS para estilização, focada na gestão eficiente de itens de cardápio.",
     details:
-      "Cardápio API Fullstack é uma aplicação completa que integra um backend robusto com Spring Boot e um frontend dinâmico em React, voltada para a gestão de cardápios de restaurante. A API permite CRUD de itens de cardápio, com persistência em MySQL e interface moderna com TailwindCSS Toda a aplicação é containerizada com Docker, permitindo a execução de backend, frontend e banco de dados com um único comando. A documentação interativa é gerada automaticamente via Swagger, e a confiabilidade do backend é garantida por testes unitários com JUnit5 O frontend em React proporciona navegação ágil e responsiva, com um design minimalista e intuitivo.",
+      "O Cardápio API Fullstack é uma aplicação completa com Spring Boot, React, MySQL e TailwindCSS, voltada para a gestão de cardápios de restaurante. Possui CRUD completo, interface responsiva, documentação automática com Swagger e testes com JUnit5. Totalmente containerizada com Docker, permite iniciar backend, frontend e banco de dados com um único comando, garantindo agilidade e confiabilidade no uso.",
     technologies: [
       "git",
       "java",
@@ -126,17 +127,17 @@ const TechCard = () => {
   return (
     <>
       {/* Grid de cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-400 mx-auto mt-16 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-400 mx-auto mt-16 px-5 xl:px-2">
         {techCards.map((card, index) => (
           <div
             key={index}
             onClick={() => setSelectedCard(card)}
-            className="rounded-2xl shadow-xl h-full object-cover overflow-hidden flex flex-col cursor-pointer transform transition duration-300 bg-[#0E0E0E] hover:scale-[1.03]"
+            className="rounded-[10px] shadow-xl h-full object-cover overflow-hidden flex flex-col cursor-pointer transform transition duration-300 bg-[#0E0E0E] hover:scale-[1.03]"
           >
             <img
               src={card.image}
               alt={card.title}
-              className="w-full h-40 object-cover"
+              className="w-full h-40 shadow-lg object-cover"
             />
             <div className="p-3 flex flex-col flex-1 text-white">
               <h5 className="font-bold text-md mb-3">{card.title}</h5>
@@ -159,47 +160,47 @@ const TechCard = () => {
 
       {/* Modal */}
       {selectedCard && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60 backdrop-blur-sm px-4 rounded-xl">
-          <div className="max-w-2xl w-full rounded-sm p-6 text-white relative shadow-2xl animate-fade-in animate-glow bg-[#0D0907]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60 backdrop-blur-sm px-4 rounded-2xl">
+          <div className="max-w-2xl lg:max-w-3xl w-full rounded-lg p-4 text-white relative shadow-2xl animate-fade-in animate-glow bg-[#0D0907]">
             {/* Botão para fechar */}
             <button
               onClick={() => setSelectedCard(null)}
-              className="absolute top-[-2px] right-[6px] text-white rounded-full p-1 transition cursor-pointer text-sm"
+              className="absolute top-[2px] right-[-2px] text-white rounded-full p-1 transition cursor-pointer text-sm"
             >
-              x
+              <X size={15} />
             </button>
 
             {/* Conteudo */}
             <img
               src={selectedCard.image}
               alt={selectedCard.title}
-              className="w-full h-50 object-cover rounded-md"
+              className="w-full h-38 mt-2 md:h-80 lg:w-[80%] lg:h-70 lg:mx-auto lg:mt-5 object-cover rounded-[5px] shadow-md shadow-white/20"
             />
-            <h3 className="mt-5 mb-3 font-bold text-xl">
+            <h3 className="mt-6 mb-2 font-bold text-md lg:px-8">
               {selectedCard.title}
             </h3>
-            <p className="text-sm p-selectedCard mb-8">
+            <p className="text-sm p-selectedCard mb-4 lg:px-8">
               {selectedCard.details}
             </p>
 
-            <div className="flex flex-wrap justify-center items-center gap-2 mb-7 mt-auto">
+            <div className="flex flex-wrap justify-center items-center gap-2 mb-4 xl:mb-9 mt-auto">
               {selectedCard.technologies.map((tech, idx) => (
                 <img
                   key={idx}
                   src={techIcons[tech]}
                   alt={tech}
                   title={tech}
-                  className="w-9 h-9 transform transition duration-300 hover:scale-[1.05] cursor-pointer"
+                  className="w-6 h-6 md:w-7 lg:h-7 transform transition duration-300 hover:scale-[1.05] cursor-pointer"
                 />
               ))}
             </div>
 
             <div>
               {selectedCard.link && (
-                <div className="flex justify-center items-center gap-8">
+                <div className="flex justify-center items-center gap-4">
                   <a
                     href={selectedCard.link}
-                    class="relative bottom-0 flex justify-center items-center gap-2 border border-[#000] rounded-xl text-[#FFF] font-black bg-[#000] uppercase px-8 py-4 z-10 overflow-hidden ease-in-out duration-700 group hover:text-[#000] hover:bg-[#FFF] active:scale-95 active:duration-0 focus:bg-[#FFF] focus:text-[#000] isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700"
+                    class="relative bottom-0 flex justify-center items-center gap-2 border border-[#000] rounded-xl text-[#FFF] font-black bg-[#000] uppercase px-3 md:px-8 py-4 z-10 overflow-hidden ease-in-out duration-700 group hover:text-[#000] hover:bg-[#FFF] active:scale-95 active:duration-0 focus:bg-[#FFF] focus:text-[#000] isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-[#FFF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700"
                   >
                     <span class="truncate eaes-in-out duration-300 group-active:-translate-x-96 group-focus:translate-x-96 text-sm">
                       Testar Aplicação
