@@ -85,7 +85,7 @@ const AnimatedHeader = () => {
         </h2>
 
 
-   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30">
+   <div className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30">
       <a
         href="https://www.linkedin.com/in/ezequielmiguel"
         target="_blank"
