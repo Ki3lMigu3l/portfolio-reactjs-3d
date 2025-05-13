@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       className="lg:mt-55 mb-20 sm:px-10 px-5 
-      scroll-mt-23 md:scroll-mt-25 xl:scroll-mt-35"
+      scroll-mt-23 md:scroll-mt-25 xl:scroll-mt-30 2xl:scroll-mt-57"
       id="about"
     >
       <div className="bg-[#1f1f1f27] rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto flex flex-col xl:flex-row xl:max-w-6xl items-center animate-glow-bottom">

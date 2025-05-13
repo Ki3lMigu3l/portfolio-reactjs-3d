@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       class="flex p-4 bg-transparent md:p-8 lg:p-10"
-      style={{ boxShadow: "0 -4px 6px -1px rgba(255, 255, 255, 0.1)" }}
+      style={{ boxShadow: "0 -3px 5px -1px rgba(255, 255, 255, 0.1)" }}
     >
       <div class="mx-auto max-w-screen-xl text-center">
         <a
@@ -37,14 +37,6 @@ const Footer = () => {
               href="#"
               class="text-neutral-400 hover:text-neutral-200 mr-4 hover:underline md:mr-6"
             >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="text-neutral-400 hover:text-neutral-200 mr-4 hover:underline md:mr-6"
-            >
               Contact
             </a>
           </li>
@@ -59,13 +51,6 @@ const Footer = () => {
             . All Rights Reserved.
           </span>
         </div>
-        {/* <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © {new Date().getFullYear()}{" "}
-          <a href="#" class="hover:underline">
-            Ezequiel Miguel™
-          </a>
-          . All Rights Reserved.
-        </span> */}
 
         <footer class="flex items-center bg-transparent max-w-4xl rounded-lg shadow-sm "></footer>
       </div>
