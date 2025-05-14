@@ -55,7 +55,7 @@ const Hero = () => {
 
   return (
     <section className="w-full h-full">
-      <div className="mt-60 lg:mt-50 xl:mt-75 w-full h-200 absolute inset-0">
+      <div className="lg:mt-50 xl:mt-90 w-full h-200 absolute inset-0">
         {/* <Leva /> */}
         <Canvas className="hidden lg:block w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
