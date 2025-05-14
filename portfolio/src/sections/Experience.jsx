@@ -68,7 +68,7 @@ export default function Experience() {
 
           <div className="relative max-w-7xl mx-auto px-4 lg:px-6 z-20 py-24">
             {/* Linha vertical central */}
-            <div className="absolute left-1/2 top-0 w-[2px] h-268 lg:h-250 xl:h-230 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
+            <div className="absolute left-1/2 top-0 w-[2px] h-275 md:h-250 lg:h-250 xl:h-230 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
 
             {/* Marcador central */}
             <span className="absolute hidden lg:block top-65 xl:top-60 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
