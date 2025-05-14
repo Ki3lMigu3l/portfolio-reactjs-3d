@@ -1,8 +1,8 @@
-// components/AnimatedHeader.jsx
 import { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import perfil from "/assets/perfil.JPG";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { motion } from "framer-motion";
 
 const Header = () => {
   //   intro Text
@@ -12,6 +12,22 @@ const Header = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
 
   const roles = ["FullStack Developer!", "Network Analyst NOC/SOC!"];
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
 
   useEffect(() => {
     const handleTyping = () => {
@@ -67,21 +83,39 @@ const Header = () => {
   }, []);
 
   return (
-    <section className=" scroll-mt-45" id="home">
-      <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 px-4 sm:px-8 mt-25 md:mt-37 lg:mt-40">
-        <h1 className="title text-4xl md:text-5xl xl:text-6xl text-white text-center ">
-          Hi, i'm Ezequiel
-        </h1>
-        <img
+    <motion.section
+      id="home"
+      className="scroll-mt-45"
+      variants={container}
+      initial="hidden"
+      animate="show"
+    >
+      <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 px-4 sm:px-8 mt-25 md:mt-37 lg:mt-45 xl:mt-55">
+        <motion.h1
+          variants={item}
+          className="title text-4xl md:text-5xl xl:text-6xl text-white text-center"
+        >
+          Hi, I'm Ezequiel
+        </motion.h1>
+
+        <motion.img
+          variants={item}
           src={perfil}
           alt="perfil"
           className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full object-cover shadow-lg overflow-hidden animate-glow profile-floating"
         />
 
-        <h2 className="headline sm:text-2xl text-xl font-medium text-white text-center font-generalsans">
+        <motion.h2
+          variants={item}
+          className="headline sm:text-2xl text-xl font-medium text-white text-center font-generalsans"
+        >
           {text} <span className="text-lg floating-rocket"> 🚀</span>
-        </h2>
-        <div className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30">
+        </motion.h2>
+
+        <motion.div
+          variants={item}
+          className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30"
+        >
           <button className="btn-linkedin transition-colors duration-500">
             <a
               href="https://www.linkedin.com/in/ezequielmiguel"
@@ -103,18 +137,24 @@ const Header = () => {
             <i className="fab fa-github text-xl" />
             <span>GitHub</span>
           </a>
-        </div>
+        </motion.div>
 
-        <h3 className="subtitle text-center xl:text-6xl md:text-5xl sm:text-3xl text-3xl text-white mt-14">
+        <motion.h3
+          variants={item}
+          className="subtitle text-center xl:text-6xl md:text-5xl sm:text-3xl text-3xl text-white mt-14"
+        >
           Delivering Clean Architecture
-        </h3>
+        </motion.h3>
 
-        <p className="paragraph text-center px-3 sm:px-6 md:px-8 mx-auto max-w-3xl sm:max-w-4xl md:text-lg mb-30">
+        <motion.p
+          variants={item}
+          className="paragraph text-center px-3 sm:px-6 md:px-8 mx-auto max-w-3xl sm:max-w-4xl md:text-lg mb-30"
+        >
           Especialista em desenvolvimento de software com foco em arquitetura
           limpa, escalabilidade, performance e manutenibilidade.
-        </p>
+        </motion.p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

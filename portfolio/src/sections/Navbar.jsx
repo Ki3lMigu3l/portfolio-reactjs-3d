@@ -3,6 +3,17 @@ import menu from "/assets/menu.svg";
 import close from "/assets/close.svg";
 import logo from "/assets/logo.png";
 import { navLinks } from "../constants";
+import { motion } from "framer-motion";
+
+const headerVariants = {
+  hidden: { opacity: 0, filter: "blur(8px)", y: -10 },
+  show: {
+    opacity: 1,
+    filter: "blur(0px)",
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
 
 const NavItems = () => {
   return (
@@ -34,8 +45,11 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <motion.header
+      initial="hidden"
+      animate="show"
+      variants={headerVariants}
+      className={`fixed top-0 left-0 right-0 z-50 ${
         isScrolled
           ? "bg-black/95 md:backdrop-blur-sm md:bg-black/70  text-white shadow-md py-1"
           : "bg-transparent text-white py-0"
@@ -85,7 +99,7 @@ const Navbar = () => {
           <NavItems />
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
