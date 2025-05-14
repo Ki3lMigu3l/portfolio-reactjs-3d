@@ -85,7 +85,7 @@ const Header = () => {
   return (
     <motion.section
       id="home"
-      className="scroll-mt-45 finisher-header md:h-225 2xl:h-152"
+      className="scroll-mt-45 finisher-header md:h-225 2xl:h-160"
       variants={container}
       initial="hidden"
       animate="show"
