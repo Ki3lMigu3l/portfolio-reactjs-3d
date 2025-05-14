@@ -132,7 +132,7 @@ const TechCard = () => {
           <div
             key={index}
             onClick={() => setSelectedCard(card)}
-            className="rounded-[10px] shadow-xl h-full object-cover overflow-hidden flex flex-col cursor-pointer transform transition duration-300 bg-[#0E0E0E] hover:scale-[1.03]"
+            className="rounded-[9px] shadow-xl h-full object-cover overflow-hidden flex flex-col cursor-pointer transform transition duration-300 bg-[#000] hover:scale-[1.04] border-[1px] border-[#ffffff20] "
           >
             <img
               src={card.image}
@@ -160,12 +160,12 @@ const TechCard = () => {
 
       {/* Modal */}
       {selectedCard && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60 backdrop-blur-sm px-4 rounded-2xl">
-          <div className="max-w-2xl lg:max-w-3xl w-full rounded-lg p-4 text-white relative shadow-2xl animate-fade-in animate-glow bg-[#0D0907]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-60 backdrop-blur-sm px-4">
+          <div className="max-w-2xl lg:max-w-3xl w-full rounded-[9px] text-white relative shadow-2xl animate-fade-in bg-[#000] border-[1px] border-[#ffffff20] ">
             {/* Botão para fechar */}
             <button
               onClick={() => setSelectedCard(null)}
-              className="absolute top-[2px] right-[-2px] text-white rounded-full p-1 transition cursor-pointer text-sm"
+              className="absolute top-[0px] right-[0px] lg:top-[2px] lg:right-[2px] text-[#8c8c8cd0] rounded-full p-1 transition cursor-pointer text-sm"
             >
               <X size={15} />
             </button>
@@ -174,12 +174,12 @@ const TechCard = () => {
             <img
               src={selectedCard.image}
               alt={selectedCard.title}
-              className="w-full h-38 mt-2 md:h-80 lg:w-[80%] lg:h-70 lg:mx-auto lg:mt-5 object-cover rounded-[5px] shadow-md shadow-white/20"
+              className="w-full h-40 md:h-80 lg:w-[100%] lg:h-80 image-card object-cover"
             />
-            <h3 className="mt-6 mb-2 font-bold text-md lg:px-8">
+            <h3 className="pt-6 pb-2 px-3 font-bold text-md lg:px-8">
               {selectedCard.title}
             </h3>
-            <p className="text-sm p-selectedCard mb-4 lg:px-8">
+            <p className="text-sm p-selectedCard mb-6 px-3 lg:px-8">
               {selectedCard.details}
             </p>
 

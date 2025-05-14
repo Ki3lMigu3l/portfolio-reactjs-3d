@@ -3,10 +3,7 @@ import logo from "../../public/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer
-      class="flex p-4 bg-transparent md:p-8 lg:p-10"
-      style={{ boxShadow: "0 -3px 5px -1px rgba(255, 255, 255, 0.1)" }}
-    >
+    <footer class="flex p-4 bg-transparent md:p-8 lg:p-10 border-1 border-[#ffffff20] ">
       <div class="mx-auto max-w-screen-xl text-center">
         <a
           href="#"

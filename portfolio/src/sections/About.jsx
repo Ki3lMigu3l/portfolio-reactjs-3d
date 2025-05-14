@@ -3,22 +3,35 @@ import about from "/assets/about.jpg";
 const About = () => {
   return (
     <section
+<<<<<<< HEAD
       className="lg:mt-55 mb-20 sm:px-10 px-5 
       scroll-mt-23 md:scroll-mt-25 xl:scroll-mt-30 2xl:scroll-mt-57"
+=======
+<<<<<<< HEAD
+      className="mb-20 sm:px-10 px-5 
+      scroll-mt-23 md:scroll-mt-25 xl:scroll-mt-35"
+=======
+      className="lg:mt-55 mb-20 sm:px-10 px-5 
+      scroll-mt-23 md:scroll-mt-25 xl:scroll-mt-30 2xl:scroll-mt-57"
+>>>>>>> c955c69fc87023d76dcfbb948c4185123d88cd1a
+>>>>>>> prod
       id="about"
     >
-      <div className="bg-[#1f1f1f27] rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto flex flex-col xl:flex-row xl:max-w-6xl items-center animate-glow-bottom">
+      <div
+        // className="about"
+        className="bg-[#000] border-[2px] border-[#ffffff20] rounded-[9px] shadow-xl overflow-hidden mx-auto flex flex-col lg:flex-row xl:max-w-6xl items-center "
+      >
         {/* imagem */}
-        <div className="w-full h-75 md:h-95 lg:h-110 xl:w-2/3 xl:h-full">
+        <div className="w-full h-67 p-2 md:h-95 lg:w-[60%] lg:h-157 lg:px-2 2xl:w-[50%] 2xl:p-9  xl:w-2/3 xl:h-full">
           <img
             src={about}
             alt="ezequiel miguel"
-            className="w-full h-full object-cover md:object-[center_30%] lg:object-[center_30%] xl:object-cover"
+            className="w-full h-full rounded-[9px] object-cover md:object-[center_30%] lg:object-[center_30%] xl:object-cover"
           />
         </div>
         {/* texto */}
         <div className="w-full gap-5 flex flex-col items-center justify-center text-white text-center">
-          <h4 className="text-center xl:text-2xl md:text-2xl sm:text-xl text-2xl font-semibold bg-gradient-to-r from-[#bec1cf] from-60% via-[#D5D8EA] via-60% to-[#d5d8ea] to-100% bg-clip-text text-transparent mt-5">
+          <h4 className="text-center xl:text-2xl md:text-2xl sm:text-xl text-2xl font-semibold bg-gradient-to-r from-[#bec1cf] from-60% via-[#D5D8EA] via-60% to-[#d5d8ea] to-100% bg-clip-text text-transparent mt-3 xl:mt-10">
             About me
           </h4>
 

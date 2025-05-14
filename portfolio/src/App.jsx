@@ -4,16 +4,15 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
-import AnimatedHeader from "./components/AnimatedHeader";
 import Footer from "./sections/Footer";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <div>
-      <AnimatedHeader />
+      <Navbar />
+      <Header />
       <main className="max-w-7xl mx-auto">
-        <Navbar />
-        <Hero />
         <About />
         <Experience />
         <Projects />

@@ -1,6 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/general-sans");
 @import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "tailwindcss";
 
@@ -13,10 +14,37 @@ body {
   font-family: "General Sans", sans-serif;
 }
 
-h1 {
-  font-family: "Birthstone", cursive;
-  font-weight: 400;
-  font-style: normal;
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  /* font-family: "Birthstone", cursive; */
+  /* font-style: normal; */
+}
+
+.headline {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  color: #cececec1;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.paragraph {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  color: #cececec1;
+}
+
+.about {
+  border-radius: 9px;
+  align-items: center;
+}
+
+.image-card {
+  border-radius: 5px 5px 0 0;
 }
 
 h2 {
@@ -59,6 +87,67 @@ li {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+
+.logo {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  color: #fff;
+}
+
+.links {
+  font-family: "Inter", sans-serif;
+  font-weight: 450;
+  color: #cececec1;
+  font-size: 15px;
+}
+
+.links:hover {
+  color: #fff;
+}
+
+.btn-contact {
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  color: #000000ac;
+  background: #999999;
+}
+
+.btn-linkedin {
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-linkedin:hover {
+  color: #000000ac;
+  background: #212121;
+}
+
+.btn-github {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.btn-linkedin:hover {
+  color: #000000ac;
 }
 
 .waving-hand {
