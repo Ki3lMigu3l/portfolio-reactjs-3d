@@ -1,8 +1,9 @@
 // components/AnimatedHeader.jsx
 import { useEffect, useState } from "react";
 import perfil from "/assets/perfil.JPG";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-const AnimatedHeader = () => {
+const Header = () => {
   //   intro Text
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("");
@@ -66,11 +67,12 @@ const AnimatedHeader = () => {
 
   return (
     <section
-      className="finisher-header w-full h-183 sm:h-150 md:h-208 xl:h-210 2xl:h-232 scroll-mt-45"
-      id="home"
+
+    // className="finisher-header w-full h-183 sm:h-150 md:h-226 xl:h-210 2xl:h-232 scroll-mt-45"
+    // id="home"
     >
-      <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-8 mt-40 sm:mt-32 md:mt-42 lg:mt-25 xl:mt-40 2xl:mt-40">
-        <h1 className="xl:text-6xl md:text-5xl sm:text-4xl text-5xl font-medium text-white text-center ">
+      <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 px-4 sm:px-8 mt-25 md:mt-37 lg:mt-40">
+        <h1 className="title text-4xl md:text-5xl xl:text-6xl text-white text-center ">
           Hi, i'm Ezequiel
         </h1>
         <img
@@ -79,14 +81,39 @@ const AnimatedHeader = () => {
           className="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full object-cover shadow-lg overflow-hidden animate-glow profile-floating"
         />
 
-        <h2 className="sm:text-2xl text-xl font-medium text-white text-center font-generalsans">
+        <h2 className="headline sm:text-2xl text-xl font-medium text-white text-center font-generalsans">
           {text} <span className="text-lg floating-rocket"> 🚀</span>
         </h2>
-        <h3 className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-2xl font-black !leading-normal bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent mt-5">
+
+        <div className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30">
+          <button className="btn-linkedin transition-colors duration-500">
+            <a
+              href="https://www.linkedin.com/in/ezequielmiguel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[#000] hover:text-white transition-colors duration-500"
+            >
+              <i className="fab fa-linkedin text-xl" />
+              <span>LinkedIn</span>
+            </a>
+          </button>
+
+          <a
+            href="https://github.com/ki3lmigu3l"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-github flex overflow-hidden items-center text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-8 px-4 py-1 max-w-52 whitespace-pre md:flex group relative w-full justify-center gap-3 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-black hover:ring-offset-2"
+          >
+            <i className="fab fa-github text-xl" />
+            <span>GitHub</span>
+          </a>
+        </div>
+
+        <h3 className="subtitle text-center xl:text-6xl md:text-5xl sm:text-3xl text-3xl text-white mt-14">
           Delivering Clean Architecture
         </h3>
 
-        <p className="text-base leading-relaxed text-center text-white px-3 sm:px-6 md:px-8 mx-auto max-w-3xl sm:max-w-4xl md:text-lg">
+        <p className="paragraph text-center px-3 sm:px-6 md:px-8 mx-auto max-w-3xl sm:max-w-4xl md:text-lg mb-30">
           Especialista em desenvolvimento de software com foco em arquitetura
           limpa, escalabilidade, performance e manutenibilidade.
         </p>
@@ -95,4 +122,4 @@ const AnimatedHeader = () => {
   );
 };
 
-export default AnimatedHeader;
+export default Header;

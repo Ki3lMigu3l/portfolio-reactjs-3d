@@ -102,7 +102,7 @@ export default function Experience() {
                       className="backdrop-blur-md relative z-20"
                     >
                       {/* Card */}
-                      <div className="w-full md:max-w-xl lg:max-w-md xl:max-w-130 px-4 py-6 lg:px-3 lg:py-5 bg-white/5 border border-gray-600 rounded-2xl shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-[1.02] cursor-pointer">
+                      <div className="w-full md:max-w-xl lg:max-w-md xl:max-w-130 px-4 py-6 lg:px-3 lg:py-5 bg-black/2 border-2 border-[#ffffff20] rounded-2xl shadow-xl backdrop-blur-md transition-transform duration-500 hover:scale-[1.02] cursor-pointer">
                         <div className="flex flex-col items-center justify-between mb-4">
                           <h3 className="text-md font-semibold text-center text-white">
                             {exp.role}
