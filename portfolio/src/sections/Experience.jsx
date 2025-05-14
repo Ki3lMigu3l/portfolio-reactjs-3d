@@ -43,39 +43,73 @@ const experiences = [
   },
 ];
 
-const cardVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
+const titleVariant = {
+  hidden: { opacity: 0, y: -30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const markerVariant = {
+  hidden: { opacity: 0, scale: 0.6 },
+  show: (custom) => ({
     opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.15,
-      duration: 0.6,
-      type: "spring",
-      stiffness: 60,
-    },
+    scale: 1,
+    transition: { delay: custom * 0.2, duration: 0.5 },
   }),
 };
+
+const cardVariant = (isLeft) => ({
+  hidden: { opacity: 0, x: isLeft ? -100 : 100 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 60, damping: 20 },
+  },
+});
 
 export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-36 px-4 text-white">
       <section className="my-30 py-0 px-1 text-white overflow-hidden">
         <div className="relative max-w-6xl mx-auto">
-          <h2 className="text-center text-3xl sm:text-4xl text-white mb-3">
+          <motion.h2
+            variants={titleVariant}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="text-center text-3xl sm:text-4xl text-white mb-3"
+          >
             Experiência Profissional
-          </h2>
+          </motion.h2>
 
           <div className="relative max-w-7xl mx-auto px-4 lg:px-6 z-20 py-24">
             {/* Linha vertical central */}
             <div className="absolute left-1/2 top-0 w-[2px] h-275 md:h-250 lg:h-250 xl:h-230 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
 
             {/* Marcador central */}
-            <span className="absolute hidden lg:block top-65 xl:top-60 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
-
-            <span className="absolute hidden lg:block top-160 xl:top-150 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
-
-            <span className="absolute hidden lg:block top-247 xl:top-230 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md" />
+            <motion.span
+              custom={0}
+              variants={markerVariant}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="absolute hidden lg:block top-65 xl:top-60 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
+            />
+            <motion.span
+              custom={1}
+              variants={markerVariant}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="absolute hidden lg:block top-160 xl:top-150 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
+            />
+            <motion.span
+              custom={2}
+              variants={markerVariant}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="absolute hidden lg:block top-247 xl:top-230 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
+            />
 
             {/* Lista de experiências */}
             <div className="flex flex-col space-y-14 relative z-10">

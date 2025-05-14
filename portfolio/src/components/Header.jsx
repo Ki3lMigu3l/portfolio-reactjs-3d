@@ -85,12 +85,12 @@ const Header = () => {
   return (
     <motion.section
       id="home"
-      className="scroll-mt-45"
+      className="scroll-mt-45 finisher-header md:h-225 2xl:h-152"
       variants={container}
       initial="hidden"
       animate="show"
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 px-4 sm:px-8 mt-25 md:mt-37 lg:mt-45 xl:mt-55">
+      <div className=" w-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 px-4 sm:px-8 mt-25 md:mt-50 lg:mt-45 xl:40 2xl:mt-50">
         <motion.h1
           variants={item}
           className="title text-4xl md:text-5xl xl:text-6xl text-white text-center"
@@ -114,7 +114,7 @@ const Header = () => {
 
         <motion.div
           variants={item}
-          className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30"
+          className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30 2xl:mt-8"
         >
           <button className="btn-linkedin transition-colors duration-500">
             <a
@@ -141,7 +141,7 @@ const Header = () => {
 
         <motion.h3
           variants={item}
-          className="subtitle text-center xl:text-6xl md:text-5xl sm:text-3xl text-3xl text-white mt-14"
+          className="subtitle text-center xl:text-6xl md:text-5xl sm:text-3xl text-3xl text-white mt-14 xl:mt-20 2xl:mt-25"
         >
           Delivering Clean Architecture
         </motion.h3>
