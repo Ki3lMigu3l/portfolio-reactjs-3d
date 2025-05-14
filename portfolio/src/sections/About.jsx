@@ -3,8 +3,8 @@ import about from "/assets/about.jpg";
 const About = () => {
   return (
     <section
-      className="lg:mt-55 mb-20 sm:px-10 px-5 
-      scroll-mt-23 md:scroll-mt-25 xl:scroll-mt-30 2xl:scroll-mt-57"
+      className="lg:mt-20 mb-40 sm:px-10 px-5 
+      scroll-mt-23 md:scroll-mt-25 lg:scroll-mt-45 xl:scroll-mt-40 2xl:scroll-mt-57"
       id="about"
     >
       <div

@@ -67,11 +67,7 @@ const Header = () => {
   }, []);
 
   return (
-    <section
-
-    // className="finisher-header w-full h-183 sm:h-150 md:h-226 xl:h-210 2xl:h-232 scroll-mt-45"
-    // id="home"
-    >
+    <section className=" scroll-mt-45" id="home">
       <div className="w-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-4 px-4 sm:px-8 mt-25 md:mt-37 lg:mt-40">
         <h1 className="title text-4xl md:text-5xl xl:text-6xl text-white text-center ">
           Hi, i'm Ezequiel
