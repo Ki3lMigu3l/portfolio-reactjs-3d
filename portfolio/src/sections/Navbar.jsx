@@ -91,7 +91,7 @@ const Navbar = () => {
 
       {/* Mobile */}
       <div
-        className={`absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto md:hidden block ${
+        className={`absolute left-0 right-0 bg-black/95 transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto md:hidden block ${
           isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
