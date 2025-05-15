@@ -3,7 +3,7 @@ import logo from "../../public/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer class="flex p-4 bg-transparent md:p-8 lg:p-10 border-1 border-[#ffffff20] ">
+    <footer class="flex p-4 bg-transparent md:p-8 lg:p-10 border-t-1 border-[#ffffff20] ">
       <div class="mx-auto max-w-screen-xl text-center">
         <a
           href="#"
