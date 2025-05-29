@@ -210,7 +210,7 @@ const TechCard = () => {
             <img
               src={selectedCard.image}
               alt={selectedCard.title}
-              className="w-full h-40 md:h-80 lg:w-[100%] lg:h-110 image-card object-cover"
+              className="w-full h-40 md:h-80 lg:w-[100%] lg:h-78 lg:object-top xl:h-110 image-card object-cover"
             />
             <h3 className="pt-6 pb-2 px-3 font-bold text-md lg:px-8">
               {selectedCard.title}

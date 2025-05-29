@@ -9,11 +9,13 @@ const experiences = [
     startDate: "Jan 2025",
     endDate: "Abr 2025",
     highlights: [
-      "Monitoramento contínuo de redes MSP.",
-      "Administração de dispositivos MikroTik, switches e firewalls.",
-      "Automação com Power Automate e integração com sistemas de tickets.",
-      "Dashboards com Zabbix e Grafana.",
-      "Criação e otimização de páginas WordPress com foco em SEO.",
+      "➜ Realizo o monitoramento contínuo de redes em ambientes MSP, garantindo performance, disponibilidade e segurança.",
+      "➜ Administro e configuro dispositivos de rede como roteadores, MikroTik (RouterOS), switches gerenciáveis e firewalls dedicados, aplicando VPNs, ACLs e regras de firewall para controle de tráfego e mitigação de ameaças.",
+      "➜ Automatizo processos usando Power Automate, integrando alertas personalizados com sistemas de tickets, reduzindo em 30% o tempo médio de resposta a incidentes.",
+      "➜ Desenvolvi e mantive dashboards de monitoramento com Zabbix e Grafana, criando triggers, templates.",
+      "Soluciono falhas de conectividade em redes cabeadas e Wi-Fi.",
+      "➜ Participo do ciclo completo de novos projetos de rede, levantamento de requisitos, documentação técnica, implantação e testes.",
+      "➜ Criação, correção e otimização de páginas WordPress com foco em SEO, performance e responsividade (projetos internos e de clientes).",
     ],
   },
   {
@@ -23,9 +25,9 @@ const experiences = [
     startDate: "Abr 2024",
     endDate: "Jan 2025",
     highlights: [
-      "Administração avançada de MikroTik RouterOS.",
-      "Desenvolvimento de aplicação interna Full Stack (Spring, Angular, MySQL).",
-      "CI/CD com Docker e Gitea, reduzindo o tempo de deploy em 40%.",
+      "➜ Especializado em tecnologias MikroTik, com experiência prática em configuração avançada, otimização de desempenho e troubleshooting de dispositivos com RouterOS em ambientes de missão crítica.",
+      "➜ Liderança no desenvolvimento de uma aplicação Full Stack interno, projetado para automatizar rotinas operacionais e reduzir retrabalho, com tecnologias como Java, Spring Boot, Angular e MySQL.",
+      "➜ Criação de pipelines automatizados utilizando Docker e Gitea CI/CD, promovendo entregas contínuas e testes integrados, reduzindo o tempo de deploy em mais de 40%.",
     ],
   },
   {
@@ -35,10 +37,10 @@ const experiences = [
     startDate: "Set 2022",
     endDate: "Abr 2024",
     highlights: [
-      "Suporte técnico Nível 1: conectividade, autenticação, desempenho.",
-      "Otimização de redes Wi-Fi, com melhoria de cobertura em 30%.",
-      "Gestão de chamados com CRM + ERP.",
-      "Taxa de resolução dentro do prazo acima de 95%.",
+      "➜ Realizei atendimento de suporte técnico Nível 1, solucionando problemas de conectividade, autenticação e desempenho de rede para clientes residenciais e empresariais.",
+      "➜ Analisei e ajustei configurações de roteadores e access points, melhorando a estabilidade do sinal Wi-Fi e ampliando a cobertura em mais de 30% dos chamados atendidos.",
+      "➜ Gerenciei e categorizei chamados técnicos por meio de CRM integrado a ERP proprietário, assegurando rastreabilidade completa e priorização das demandas.",
+      "➜ Coordenei fluxos de atendimento técnico, garantindo cumprimento dos SLAs com taxa de resolução dentro do prazo acima de 95%.",
     ],
   },
 ];
@@ -163,7 +165,7 @@ export default function Experience() {
                             <motion.li
                               key={idx}
                               whileHover={{ scale: 1.03 }}
-                              className="transition-all duration-500"
+                              className="transition-all duration-500 list-none"
                             >
                               {item}
                             </motion.li>
