@@ -40,7 +40,7 @@ const techCards = [
     details:
       "O Cordarius Delivery é uma aplicação web totalmente responsiva, desenvolvida com React e Tailwind, que simula de forma funcional um serviço de delivery sem utilizar servidores ou banco de dados. Projetada para ser leve e eficiente, oferece uma navegação fluida, interface intuitiva e adaptável a diferentes dispositivos, focando na agilidade do processo de pedido e entrega.",
     technologies: ["git", "react", "tailwind"],
-    link: "https://cordarius-delivery.vercel.app/",
+    link: "https://cordarius-delivery-fullstack.vercel.app/",
     repository: "https://github.com/Ki3lMigu3l/cordarius-delivery-fullstack",
   },
   {

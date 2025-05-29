@@ -1,6 +1,6 @@
 // components/AnimatedHeader.jsx
 import { useEffect, useState } from "react";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import perfil from "/assets/perfil.JPG";
 
 const AnimatedHeader = () => {
@@ -67,8 +67,8 @@ const AnimatedHeader = () => {
 
   return (
     <section
-      className="finisher-header w-full h-183 sm:h-150 md:h-208 xl:h-210 2xl:h-241 scroll-mt-45"
       id="home"
+      className="finisher-header w-full h-183 sm:h-150 md:h-208 xl:h-210 2xl:h-241 scroll-mt-48"
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-4 px-4 sm:px-8 mt-40 sm:mt-32 md:mt-42 lg:mt-25 xl:mt-40 2xl:mt-40">
         <h1 className="xl:text-6xl md:text-5xl sm:text-4xl text-5xl font-medium text-white text-center ">
@@ -84,28 +84,27 @@ const AnimatedHeader = () => {
           {text} <span className="text-lg floating-rocket"> 🚀</span>
         </h2>
 
+        <div className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30">
+          <a
+            href="https://www.linkedin.com/in/ezequielmiguel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-white hover:text-neutral-300 transition-colors duration-300"
+          >
+            <i className="fab fa-linkedin text-xl" />
+            <span className="text-base sm:text-lg">LinkedIn</span>
+          </a>
 
-   <div className="flex flex-row sm:flex-row items-center gap-4 sm:gap-8 mt-1 z-30">
-      <a
-        href="https://www.linkedin.com/in/ezequielmiguel"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 text-white hover:text-neutral-300 transition-colors duration-300"
-      >
-        <i className="fab fa-linkedin text-xl" />
-        <span className="text-base sm:text-lg">LinkedIn</span>
-      </a>
-
-      <a
-        href="https://github.com/ki3lmigu3l"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-2 text-white hover:text-neutral-300 transition-colors duration-300"
-      >
-        <i className="fab fa-github text-xl" />
-        <span className="text-base sm:text-lg">GitHub</span>
-      </a>
-    </div>
+          <a
+            href="https://github.com/ki3lmigu3l"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-white hover:text-neutral-300 transition-colors duration-300"
+          >
+            <i className="fab fa-github text-xl" />
+            <span className="text-base sm:text-lg">GitHub</span>
+          </a>
+        </div>
 
         <h3 className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-2xl font-black !leading-normal bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent mt-5">
           Delivering Clean Architecture
