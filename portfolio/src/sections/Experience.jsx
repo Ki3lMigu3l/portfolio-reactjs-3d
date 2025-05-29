@@ -85,7 +85,7 @@ export default function Experience() {
 
           <div className="relative max-w-7xl mx-auto px-4 lg:px-6 z-20 py-24">
             {/* Linha vertical central */}
-            <div className="absolute left-1/2 top-0 w-[2px] h-275 md:h-250 lg:h-250 xl:h-230 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
+            <div className="absolute left-1/2 top-0 w-[2px] h-500 md:h-350 lg:h-380 xl:h-360 bg-gradient-to-b from-[#D5D8EA] to-[#444] transform -translate-x-1/2 z-0" />
 
             {/* Marcador central */}
             <motion.span
@@ -94,7 +94,7 @@ export default function Experience() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="absolute hidden lg:block top-65 xl:top-60 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
+              className="absolute hidden lg:block top-100 xl:top-100 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
             />
             <motion.span
               custom={1}
@@ -102,7 +102,7 @@ export default function Experience() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="absolute hidden lg:block top-160 xl:top-150 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
+              className="absolute hidden lg:block top-246 xl:top-240 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
             />
             <motion.span
               custom={2}
@@ -110,7 +110,7 @@ export default function Experience() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className="absolute hidden lg:block top-247 xl:top-230 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
+              className="absolute hidden lg:block top-377 xl:top-355 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-tr from-[#BEC1CF] to-[#D5D8EA] border-4 border-gray-900 rounded-full z-20 shadow-md"
             />
 
             {/* Lista de experiências */}
@@ -160,7 +160,7 @@ export default function Experience() {
                           </span>
                         </div>
 
-                        <ul className="list-disc list-inside space-y-2 text-sm text-gray-200 pl-1 md:pl-2">
+                        <ul className="list-disc list-inside space-y-4 text-sm text-gray-200 pl-1 md:pl-2">
                           {exp.highlights.map((item, idx) => (
                             <motion.li
                               key={idx}
